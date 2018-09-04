@@ -1,12 +1,13 @@
 s = '#abc#de#eg#'
 
-def recursive_rev(s, temp, index=0):
-    index += 1
-    size = len(s)
-    if index <= size:
-        temp = s[size-index]
-        print(temp)
-        return rev(s, temp, index)
+def rev(s):
+    """prints inside out"""
+    if len(s) == 0:
+        return
+    temp = s[0]
+    rev(s[1:])
+    print(temp)
+
 
 def reverse_str(s):
     ll = []
