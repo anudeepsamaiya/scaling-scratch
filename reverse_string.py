@@ -1,13 +1,8 @@
 s = '#abc#de#eg#'
 
 def rev(s):
-    """prints inside out"""
-    if len(s) == 0:
-        return
-    temp = s[0]
-    rev(s[1:])
-    print(temp)
-
+    """concatenates inside out"""
+    return len(s) != 0 and rev(s[1:]) + s[0] or s
 
 def reverse_str(s):
     ll = []
