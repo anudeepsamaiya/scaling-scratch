@@ -7,3 +7,7 @@ def test_rev():
 def test_reverse_and_filter():
     s = '#abc#de#eg#'
     assert reverse_and_filter(s) == 'geedcba'
+
+def test_reverse_only_alnum():
+    s = '#abc#de#eg#'
+    assert reverse_only_alnum(s) == '#gee#dc#ba#'
