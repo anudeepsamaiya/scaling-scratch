@@ -10,6 +10,14 @@ def find_max_contigous_sum(arr):
             print("index: ", index, "item:", item, "max: ", max_sum, "cur: ", cur_sum)
     return max_sum
 
+def kadane_max_subarray(arr):
+    prev_max = cur_max = arr[0]
+    for item in arr[1:]:
+        cur_max = max(item, cur_max+item)
+        prev_max = max(prev_max, cur_max)
+        print("item:", item, "max: ", prev_max, "cur: ", cur_max)
+    return prev_max
+
 
 @pytest.fixture(params=[
         ((-2, 1, -3, 4, -1, 2, 1, -5, 4), 6),
