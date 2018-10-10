@@ -23,3 +23,6 @@ def test_max_contigous_sum(max_array_sum):
     arr, max_sum = max_array_sum
     assert find_max_contigous_sum(arr) == max_sum, 'incorrect max contigous sum'
 
+def test_kadane_max_subarray(max_array_sum):
+    arr, max_sum = max_array_sum
+    assert kadane_max_subarray(arr) == max_sum, 'incorrect max contigous sum'
